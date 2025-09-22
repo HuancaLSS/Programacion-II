@@ -1,6 +1,5 @@
 import random
 
-# Clase padre
 class Juego:
     def __init__(self, numeroDeVidas: int):
         self.numeroDeVidas = numeroDeVidas
@@ -43,7 +42,6 @@ class JuegoAdivinaNumero(Juego):
                 print(" Ingresa un número válido.")
                 continue
 
-            # Validación con el método polimórfico
             if not self.validaNumero(intento):
                 continue
 
@@ -61,7 +59,6 @@ class JuegoAdivinaNumero(Juego):
                     break
 
 
-# Clase para pares
 class JuegoAdivinaPar(JuegoAdivinaNumero):
     def validaNumero(self, num: int) -> bool:
         if 0 <= num <= 10 and num % 2 == 0:
@@ -71,7 +68,6 @@ class JuegoAdivinaPar(JuegoAdivinaNumero):
             return False
 
 
-# Clase para impares
 class JuegoAdivinaImpar(JuegoAdivinaNumero):
     def validaNumero(self, num: int) -> bool:
         if 0 <= num <= 10 and num % 2 != 0:
@@ -81,7 +77,6 @@ class JuegoAdivinaImpar(JuegoAdivinaNumero):
             return False
 
 
-# Clase Aplicacion
 class Aplicacion:
     def main(self):
         print("Juego Adivina Número")
@@ -96,7 +91,6 @@ class Aplicacion:
         juego3 = JuegoAdivinaImpar(vidas=3)
         juego3.juega()
 
-
-# Ejecución directa
 app = Aplicacion()
 app.main()
+
