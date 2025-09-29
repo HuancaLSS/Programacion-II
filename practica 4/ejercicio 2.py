@@ -77,6 +77,7 @@ for fig in figuras:
     print(fig)
     print(f"Área: {fig.area():.2f}")
     print(f"Perímetro: {fig.perimetro():.2f}")
-    if isinstance(fig, Coloreado):  # Si implementa la interfaz
+    if isinstance(fig, Coloreado): 
         print("Método comoColorear →", fig.comoColorear())
     print("-" * 30)
+
